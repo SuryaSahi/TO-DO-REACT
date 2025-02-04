@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: #84c612;
+}
+
+.Auth-box{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: #d50c0c;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

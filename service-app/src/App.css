@@ -1,0 +1,169 @@
+/* Main Container */
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #dfeca3;
+}
+
+/* Box for the Form and Task List */
+.Container-box {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  height: 400px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.Container-box button {
+  margin-top: 10px;
+}
+/* Heading Styles */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Form Input Styles */
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Task Input Field */
+.Container-box input {
+  width: 85%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focused Input Style */
+.Container-box input:focus {
+  outline: none;
+  border-color: #16a085;
+  box-shadow: 0 0 8px rgba(22, 160, 133, 0.3);
+}
+
+/* Submit Button Style */
+button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #16a085, #27ae60);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Button */
+button:hover {
+  background: linear-gradient(135deg, #27ae60, #16a085);
+  transform: scale(1.05);
+}
+
+/* Active Button Effect */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Task List Styles */
+.Task-List {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Completed Task Section */
+.Completed, .Working {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  overflow-y: auto; /* Allows scrolling when there are too many tasks */
+  max-height: 400px; /* Adjust based on your preference */
+}
+
+/* Task List Title */
+.Completed h2, .Working h2 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* Task List Items */
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #34495e;
+  background: #ecf0f1; /* Light background for each task */
+  border-radius: 6px;
+  padding: 12px;
+  transition: background 0.3s ease-in-out;
+}
+
+li:hover {
+  background: #d5dbdb; /* Slight hover effect */
+}
+
+/* Task Buttons inside List Items */
+button {
+  padding: 8px 18px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* Hover and Active Effects for Task Buttons */
+button:hover {
+  background-color: #f1c40f;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+@media (min-width: 768px) {
+  .Task-List {
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+  }
+
+  .Completed, .Working {
+    width: 100%;
+  }
+}
+
+/* For large screens (desktops and beyond) */
+@media (min-width: 1200px) {
+  .Task-List {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns layout */
+  }
+}
